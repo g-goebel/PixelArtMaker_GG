@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pixel Art Maker!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- add jquery lib -->
+  <script src="js/jquery-3.2.1.slim.js"></script>
+</head>
+<body>
+  <h1>Lab: Pixel Art Maker</h1>
+
+  <h2>Choose Grid Size</h2>
+  <form id="sizePicker">
+    Grid Height:
+    <input type="number" id="input_height" name="height" min="1" value="10">
+    Grid Width:
+    <input type="number" id="input_width" name="width" min="1" value="10">
+    <!-- call makeGrid() if button is clicked, stop refreshing page via "return false" -->
+    <input type="submit" onclick="makeGrid(); return false;">
+  </form>
+
+  <h2>Pick A Color</h2>
+  <!-- set default color to blue since I didn't like the black-->
+  <input type="color" id="colorPicker" value="#0066ff">
+
+  <h2>Design Canvas</h2>
+  <table id="pixel_canvas"></table>
+
+<button type="button" style="visibility: hidden;" id="resetGrid" onclick="resetGrid();">Reset grid</button>
+<button type="button" style="visibility: hidden;" id="resetPainting" onclick="resetPainting();">Reset painting</button>
+
+  <script src="js/designs.js"></script>
+</body>
+</html>
