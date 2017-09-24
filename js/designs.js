@@ -7,6 +7,9 @@ let color = "#0066ff"; // global variable since it is used in function clickMe b
 // receives the size of the grid and builds the table accordingly
 function makeGrid() {
 
+  //create a clean state if there was a grid before
+  resetGrid();
+
   // receive the size of the grid
   let gridHeight = $("#input_height").val();
   let gridWidth  = $("#input_width").val();
